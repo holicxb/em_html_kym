@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>border(선)</title>
+		
+		<style>
+			p{border-width: 20px;
+			  border-color: blue;}
+			.box1{border-style: none;}
+			.box2{border-style: hidden;}
+			.box3{border-style: dotted;}
+			.box4{border-style: dashed;}
+			.box5{border-style: solid;}/* 가장 많이 사용하는 속성 */
+			.box6{border-style: double;}
+			.box7{border-style: groove;}
+			.box8{border-style: ridge;}
+			.box9{border-style: inset;}
+			/* 3줄 작성이 아닌 한 줄로 작성하기 */
+			/* border의 width, color, style을 한 줄로 정의한 구조(순서는 중요하지 않음, 속성 개수는 중요) */
+			.box10{border: 20px #f00 outset;}
+			
+			.div1{border: 10px solid green;
+				  width: 200px;
+				  height: 100px;}
+				  
+			.div2{border-left: 10px solid blue;
+				  border-right: 10px solid blue;}
+			
+				  /* border: 가 아닌 풀네임을 사용해야 한다 */
+				  /* 시계 방향(상우하좌)으로 4개의 방향의 속성을 정할 수 있다 */
+			.div3{border-width: 10px 20px 30px 40px;
+				  border-style: solid;
+				  /* 2개면 위아래/좌우 설정 */
+				  border-color: aqua red;}
+		</style>
+	</head>
+	<body>
+		<p class="box1">border 연습 중입니다</p>
+		<p class="box2">border 연습 중입니다</p>
+		<p class="box3">border 연습 중입니다</p>
+		<p class="box4">border 연습 중입니다</p>
+		<p class="box5">border 연습 중입니다</p>
+		<p class="box6">border 연습 중입니다</p>
+		<p class="box7">border 연습 중입니다</p>
+		<p class="box8">border 연습 중입니다</p>
+		<p class="box9">border 연습 중입니다</p>
+		<p class="box10">border 연습 중입니다</p>
+		
+		<div class="div1">
+			div의 border속성
+		</div>
+		<div class="div2">
+			div의 border속성
+		</div>
+		<div class="div3">
+			div의 border속성
+		</div>
+	</body>
+</html>

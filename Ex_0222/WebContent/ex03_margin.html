@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>margin(바깥쪽 여백)</title>
+		
+		<style>
+			p{border: 10px solid red;
+			  background: aqua;}
+			  
+			.box1{margin: 20px;}/* 상 하 좌 우 */
+			/* 밑으로 20, 위로 40이면 더 작은 값을 무시한다 */
+			.box2{margin: 40px 60px;}/* 상하, 좌우 */
+			.box3{margin: 20px 50px 30px;}/* 상, 좌우, 하 */
+			.box4{margin: 20px 30px 50px 0px;}/* 상 우 하 좌 */
+			.box5{margin: 0px;}/* 기본값(1.6)이 적용된다 */
+		</style>
+	</head>
+	<body>
+		<p class="box1">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box2">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box3">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box4">띠띠뽀 꼬마기차 띠띠뽀</p>
+		<p class="box5">띠띠뽀 꼬마기차 띠띠뽀</p>
+	</body>
+</html>

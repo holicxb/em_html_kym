@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float(왼쪽, 오른쪽 정렬)</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			
+			#container{width: 500px;
+					   margin: 10px auto;
+					   border: 5px solid #caa;
+					   padding: 10px;
+					   background: #fdd;
+					   overflow: hidden;/* 자식의 float을 해제한다 */}
+					   
+			h1{text-align: center;}
+			
+			.green{width: 200px;
+				   height: 100px;
+				   padding: 15px;
+				   background: #ba7;
+				   float: left;
+				   }
+				   
+			.coffee{width: 200px;
+				   height: 100px;
+				   padding: 15px;
+				   background: #dda;
+				   float: right;
+				   }
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1>커피와 녹차</h1>
+			
+			<div class = "green">
+				<p>
+				발효시키지 않은, 푸른 빛이 그대로 나도록 말린 찻잎
+				</p>
+			</div>
+			
+			<div class = "coffee">
+				<p>
+				커피 열매의 씨앗인 커피콩을 볶아서 물에 우려낸 음료
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

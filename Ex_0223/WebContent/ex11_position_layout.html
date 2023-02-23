@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>position을 통해 레이아웃 디자인하기</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<style>
+			#header{width: 1000px; height: 80px;
+					margin: 10px auto;
+					border: 1px solid red;
+					/* absolute 속성을 가진 자식을 내 자식으로 인지하도록 하는 코드 */
+					/* float의 경우 overflow
+					   postion의 경우 position */
+					position: relative;
+			}
+			
+			/* absolute - relative 세트
+			   float - hidden 세트 */
+			.aa{position: absolute; left: 0px;	top: 7px;}
+			
+			ul{overflow: hidden;}
+			li{float: left;}
+			
+			/* 마지막에 있는 p태그 */
+			p:last-child {position: absolute; right: 10px; top: 5px;}
+			
+			.a1{position: absolute; left: 350px; top: 10px;}
+			.a2{position: absolute; left: 225px; top: 40px;}
+		</style>
+	</head>
+	
+	<body>
+		<div id="header">
+			<p class="aa">
+				<img alt="웃는 얼굴" src="image/acid2Test.jpg"
+					 width="70" height="60">
+			</p>
+			
+			<ul class="a1">
+				<li><img alt="" src="image/menu_13.jpg"></li>
+				<li><img alt="" src="image/menu_14.jpg"></li>
+				<li><img alt="" src="image/menu_15.jpg"></li>
+				<li><img alt="" src="image/menu_16.jpg"></li>
+				<li><img alt="" src="image/menu_17.jpg"></li>
+				<li><img alt="" src="image/menu_18.jpg"></li>
+				<li><img alt="" src="image/menu_19.jpg"></li>
+				<li><img alt="" src="image/menu_20.jpg"></li>
+				<li><img alt="" src="image/menu_21.jpg"></li>
+			</ul>
+
+			<ul class="a2">
+				<li><img alt="" src="image/menu01_12.jpg"></li>
+				<li><img alt="" src="image/menu01_13.jpg"></li>
+				<li><img alt="" src="image/menu01_14.jpg"></li>
+				<li><img alt="" src="image/menu01_15.jpg"></li>
+				<li><img alt="" src="image/menu01_16.jpg"></li>
+				<li><img alt="" src="image/menu01_17.jpg"></li>
+				<li><img alt="" src="image/menu01_18.jpg"></li>
+				<li><img alt="" src="image/menu01_19.jpg"></li>
+			</ul>
+			
+			<p>
+				<img alt="w3c" src="image/img_standards.gif"
+					 width="70" height="60">
+			</p>
+		</div>
+	</body>
+</html>

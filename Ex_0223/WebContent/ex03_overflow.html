@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>overflow</title>
+		
+		<style>
+			p{border: 1px solid black;
+			  padding: 5px;
+			  width: 150px;
+			  height: 50px;}
+			  
+			.a1{overflow: hidden;}
+			/* 내용이 넘치는 것과 별개로 하단과 우측에 무조건 스크롤을 표기 */
+			.a2{overflow: scroll;}
+			/* 내용이 넘칠 때만 보여주는 스크롤 */
+			.a3{overflow: auto;}
+			/* 넘치는 내용을 다 표시함(기본) */
+			.a4{overflow: visible;}
+		</style>
+	</head>
+	<body>
+		<p class="a1">
+			쨍쨍한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+		<p class="a2">
+			쨍쨍한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+		<p class="a3">
+			쨍쨍한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+		<p class="a4">
+			쨍쨍한 햇볕이나 시원한 비 눈보라도 철길에서 만나는 반가운 친구들
+		</p>
+	</body>
+</html>

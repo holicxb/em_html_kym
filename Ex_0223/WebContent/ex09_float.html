@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float 정렬을 통한 layout</title>
+		<style>
+			*{margin: 0; padding: 0;}
+			#wrap{width: 650px;
+				  margin: 0 auto;
+				  border: 5px solid #f00;
+				  background: black;
+			}
+			
+			#header{background: #09f;
+					margin-bottom: 10px;
+					text-align: center;
+					padding: 10px 0;
+					color: white;
+					font: bold 20px;
+			}
+			
+			#content{background: #ccc;
+					 margin-bottom: 10px;
+					 overflow: hidden;
+			}
+			
+			.left{float: left;
+				  width: 180px;
+				  height: 250px;
+				  padding: 10px;
+				  background: #fcf;
+			}
+			
+			.center{float: left;
+					width: 180px;
+					height: 250px;
+					padding: 10px;
+					background: #aaf;
+					margin-left: 25px;
+			}
+			
+			.right{float: left;
+				   width: 180px;
+				   height: 250px;
+				   padding: 10px;
+				   background: aqua;
+				   margin-left: 25px;
+			}
+			
+			#footer{background: #09f;
+					text-align: center;
+					padding: 10px 0;
+					color: white;
+					font: bold 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<p>윗 부분에 들어갈 내용</p>
+			</div>
+			
+			<div id="content">
+				<p class="left">왼쪽에 들어갈 내용</p>
+				<p class="center">중앙에 들어갈 내용</p>
+				<p class="right">오른쪽에 들어갈 내용</p>
+			</div>
+			
+			<div id="footer">
+				<p>아래에 들어갈 내용</p>
+			</div>
+		</div>
+	</body>
+</html>

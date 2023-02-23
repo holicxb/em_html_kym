@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>position 및 z-index</title>
+		
+		<style>
+			*{margin: 0;	padding: 0;}
+		
+			p{border: 1px solid black;
+			  width: 50px;
+			  padding: 50px;
+			  position: absolute;}/* 브라우저 기준 절대값(0,0)으로 위치 변경 */
+			
+			/* z-index는 숫자가 클 수로 위로 올라온다 */
+			.box1{background: yellow;	left: 100px;	top: 100px;
+				  z-index: 3;}
+			.box2{background: orange;	left: 120px;	top: 120px;
+				  z-index: 2;}
+			.box3{background: aqua;	left: 140px;	top: 140px;
+				  z-index: 1;}
+		</style>
+	</head>
+	<body>
+		<h2>박스 겹치기</h2>
+		
+		<p class="box1">박스1</p>
+		<p class="box2">박스2</p>
+		<p class="box3">박스3</p>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>border의 둥근 모서리</title>
+		
+		<style>
+			h1{width: 200px;
+			   padding: 80px 0;
+			   text-align: center;
+			   border: 1px solid red;
+			   border-radius: 100px;
+			   /* 네 모서리 모두에 radius 속성을 적용 */
+			}
+
+			.a1{width: 200px;
+			    padding: 80px 0;
+			    text-align: center;
+			    background: aqua;
+			    border-radius: 20px 30px;
+			    /* 좌상, 우하 */
+			}
+			
+			.a2{width: 200px;
+			    padding: 80px 0;
+			    text-align: center;
+			    background: aqua;
+			    border-radius: 20px 30px 40px;
+			    /* 좌상, 우상좌하, 우하 */
+			}
+			
+			.a3{width: 200px;
+			    padding: 80px 0;
+			    text-align: center;
+			    background: aqua;
+			    border-radius: 20px 30px 40px 50px;
+			    /* 좌상, 우상좌하, 우하 */
+			}
+			
+			img{border-radius: 20px;}
+		</style>
+	</head>
+	<body>
+		<h1>내용</h1>
+		<h1 class="a1">내용</h1>
+		<h1 class="a2">내용</h1>
+		<h1 class="a3">내용</h1>
+		<img alt="구름 많은 저녁하늘" src="image/float.jpg">
+	</body>
+</html>

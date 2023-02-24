@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>애니메이션 효과</title>
+		
+		<style>
+			.t{ width: 100px;
+				height: 100px;
+				background: red;
+				border-radius: 0px;
+				transition-property: background-color, border-radius;
+				transition-duration:1s;/* 1초에 걸쳐 배경색과 테루리를 변경할 예정 */
+				transition-delay: 2s;/* 2초 후 변경 */
+				/* -moz- : 파이어폭스 적용 */
+				-moz-transition-property: background-color, border-radius;
+				-moz-transition-duration:1s;/* 1초에 걸쳐 배경색과 테루리를 변경할 예정 */
+				-moz-transition-delay: 2s;/* 2초 후 변경 */
+				/* -o- : 오페라 브라우저 */
+				-o-transition-property: background-color, border-radius;
+				-o-transition-duration:1s;/* 1초에 걸쳐 배경색과 테루리를 변경할 예정 */
+				-o-transition-delay: 2s;/* 2초 후 변경 */
+				/* -ms- : 익스플로러 */
+				/* -webkit- : 크롬, 사파리 */
+				/* 보험을 들어두는 경우 */
+			}
+			
+			.t:hover{background: blue;
+					 border-radius: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="t">
+			
+		</div>
+	</body>
+</html>

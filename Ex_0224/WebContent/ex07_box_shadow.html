@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>box shadow</title>
+		
+		<style>
+			p{width: 100px;
+			  padding: 10px;
+			  background: #eee;
+			}
+			
+			/* border의 바깥쪽 그림자 */
+			/* 태그(border를 그릴 수 있는 애들 한테만 적용 가능) */
+			/* x축으로 튀어나오는 정도, y축으로 튀어나오는 정도, 번짐 정도, 그림자 색상 */
+			.p1{box-shadow: 10px 10px 5px #aef;}
+			.p1{box-shadow: -10px -10px 5px #333;}
+			/* rgba(red,green,blue,투명도:0-완전투명,1-불투명) */
+			.p1{box-shadow: 10px 10px 5px rgba(255,0,0,0.39);}
+			
+			/* border의 안쪽 그림자 */
+			/* 안쪽 그림자, x축 밀리는 정도, y축 밀리는 정도, 얼마나 번지게, 그림자 사이즈, 컬러 */
+			.p2{box-shadow: inset 5px -5px 5px 2px #777;}
+			
+		</style>
+	</head>
+	<body>
+		<p class="p1">안녕</p>
+		<p class="p2">하세요</p>
+	</body>
+</html>

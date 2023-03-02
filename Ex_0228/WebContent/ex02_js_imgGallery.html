@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js 이미지 갤러리 만들어보기</title>
+		
+		<style>
+			a{text-decoration: none;}
+		</style>
+		
+		<script>
+		
+			let num = 1;
+			let path = "image/img";
+			
+			function next() {
+				num++;
+				
+				if(num > 7){
+					num = 1;
+				}
+				
+				//gallery라는 id를 가진 요소로 접근하여 src경로를 변경
+				document.getElementById("gallery").src = path + num + ".jpg";
+				
+			}
+
+			function prev() {
+				num--;
+				if(num < 1){
+					num = 7;
+				}
+				let gallery = document.getElementById("gallery");
+				gallery.src = path + num + ".jpg";
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<a href="#" onClick="prev();">
+				<img alt="" src="image/left_btn.png">
+			</a>
+			
+			<img id="gallery" alt="" src="image/img1.jpg" width="300px" height="200px">
+			
+			<a href="#" onClick="next();">
+				<img alt="" src="image/right_btn.png">
+			</a>
+		</div>
+	</body>
+</html>

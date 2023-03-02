@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>삼항연산자</title>
+		
+		<script>
+			let n1 = Number(prompt("값 1"));
+			let n2 = Number(prompt("값 2"));
+			
+			//		? alert() : alert();
+			n1 < n2 ? document.write("참") : document.write("거짓");
+			
+			document.write("<hr>");
+			
+			//prompt로 값을 받으면 문장으로 값이 넘어오지만
+			//if문 등에서 비교연산자와 사용할 경우 알아서 정수 형태로 인지
+			n1 = prompt("수1");
+			n2 = prompt("수2");
+			
+			if(n1 >= 50 && n2 >= 50){
+				document.write("합격");				
+			} else{
+				document.write("불합격");				
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

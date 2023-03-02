@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>계산기 만들기</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<script>
+			function cal(op) {
+				let f = document.getElementById("f1");
+				
+				let num1 = Number(f.num1.value);
+				let num2 = Number(f.num2.value);
+				
+				let num_check = /^[0-9]+$/;//{범위}
+				if(!num_check.test(num1) || !num_check.test(num2)){
+					alert("양의 정수만 입력하세요");
+					return;
+				}
+				
+				let res;
+
+				switch (op) {
+				case "+":
+					res = num1 + num2;
+					break;
+				case "-":
+					res = num1 - num2;
+					break;
+				case "*":
+					res = num1 * num2;
+					break;
+				case "/":
+					res = (num1 / num2).toFixed(2);
+					break;
+
+				default:
+					break;
+				}
+				
+				let s = document.getElementById('show');
+				s.textContent = res;
+			}
+		</script>
+		
+		<style>
+			th {width: 50px;}
+			td {width: 170px;}
+			input {width : 50px;}
+		</style>
+	</head>
+	<body>
+		
+		<form id="f1">
+			<table border="1">
+				<tr>
+					<th>수1</th>
+					<td><input name="num1"></td>
+				</tr>
+
+				<tr>
+					<th>수2</th>
+					<td><input name="num2"></td>
+				</tr>
+			</table>
+			
+			<input type="button" value="+" onClick="cal('+');"> 
+			<input type="button" value="-" onClick="cal('-');">
+			<input type="button" value="*" onClick="cal('*');">
+			<input type="button" value="/" onClick="cal('/');">
+			
+			<table border="1">
+				<tr>
+					<th>결과</th>
+					<td id="show"></td>
+				</tr>
+			</table>
+		</form>
+		
+	</body>
+</html>

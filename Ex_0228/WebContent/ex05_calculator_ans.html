@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>계산기 만들기</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			*{padding: 5px;}
+			th {width: 50px;}
+			td {width: 170px;}
+			li {float: left; margin-left: 10px;}
+			input{border-style: none;}
+			ul li input {width: 35px;}
+		</style>
+		
+		<script>
+			function cal(op) {
+				let su1 = document.getElementById("su1").value;
+				let su2 = document.getElementById("su2").value;
+				
+				let result = document.getElementById("result");
+
+				//유효성체크
+				let num_check = /^[0-9]+$/;//{범위}
+				if(!num_check.test(su1) || !num_check.test(su2)){
+					alert("양의 정수만 입력하세요");
+					return;
+				}
+				
+				let res;
+				switch (op) {
+				case "+":
+					res = Number(su1) + Number(su2);
+					break;
+				case "-":
+					res = su1 - su2;
+					break;
+				case "*":
+					res = su1 * su2;
+					break;
+				case "/":
+					if(su2 == 0){
+						alert("0으로는 나눌 수 없습니다");
+						return;
+					}
+					res = su1 / su2;
+					result.value = res.toFixed(2);
+					return;
+				}
+				
+				result.value = res;
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th class="su">수1</th>
+				<td><input id="su1"></td>
+			</tr>
+
+			<tr>
+				<th class="su">수2</th>
+				<td><input id="su2"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<ul>
+						<li><input type="button" value="+" onclick="cal('+');"></li>
+						<li><input type="button" value="-" onclick="cal('-');"></li>
+						<li><input type="button" value="*" onclick="cal('*');"></li>
+						<li><input type="button" value="/" onclick="cal('/');"></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th class="res">결과</th>
+				<td><input id="result" readonly="readonly"></td>
+			</tr>
+		</table>
+	</body>
+</html>

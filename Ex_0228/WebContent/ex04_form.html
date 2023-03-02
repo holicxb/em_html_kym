@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form태그</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<script>
+			function check1() {
+				//f1이라는 id를 가진 form 태그를 검색
+				let f = document.getElementById("f1");
+				
+				//검색한 form 태그인 f를 통해 id라는 name 속성을 가진 태그로 접근
+				let id = f.id.value;
+				let pwd = f.pwd.value;
+				let age = f.age.value;
+				
+				//유효성 체크
+				let check_age = /^[0-9]+$/;
+				
+				if(!check_age.test(age)){
+					alert("나이는 정수로 입력해주세요");
+					return;
+				}
+				
+				if(id == ''){
+					alert("아이디는 반드시 입력해야 합니다");
+					return;
+				}
+				
+				if(pwd == ''){
+					alert("비밀번호는 필수입니다");
+					return;
+				}
+				
+				//전송방식
+				//GET : 파라미터를 url에 노출. 보안성이 떨어지지만 속도가 빠른 편
+				//POST : 파라미터가 url에 노출되지 않음. 속도는 느린 편이지만 보안성이 높아진다
+				
+				f.method = "post";
+
+				f.action = "login.jsp";
+				
+				//입력된 데이터(form 안에 name으로 설정된 값)을 서버측으로 전송
+				f.submit();
+			}//check1
+			
+			function check2() {
+				//name이 fff로 지정되어 있는 form태그 가져오기
+				let f = document.fff;
+				let id = f.id.value;
+				let pwd = f.pwd.value;
+				
+				// 유효성체크했다고 치기
+				// f.method = "post";
+				// f.action = "login.jsp"
+				
+				f.submit();
+				
+			}//check2
+			
+			function check3(f) {
+				//파라미터로 전달될 f객체가 form태그 자체
+				let id = f.id.value;
+				let pwd = f.pw.value;
+				
+				//유효성 체크
+				
+				f.method="get";
+				f.action="login.jsp";
+				
+				//f태그가 가진 모든 name속성을 login.jsp에 파라미터로 전달
+				f.submit();
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 서버로 값을 전송하기 위해 데이터를 스크립트 영역으로 옮겨주기 위한 태그 -->
+		<form id="f1">
+			<table border="1">
+				<tr>
+					<th>아이디</th>
+					<!-- name속성은 id와 비슷하지만, input, textArea태그 등의 정해진
+					일부 태그에서만 사용이 가능아며, form 태그 밖에서 name속성을 정의하는 것은 의미가 없다 -->
+					<td><input name="id"></td>
+				</tr>
+
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="pwd"></td>
+				</tr>
+
+				<tr>
+					<th>나이</th>
+					<td><input name="age"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="폼체크 1" onClick="check1();">
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+		<hr>
+		
+		<form name="fff" method="get" action="login.jsp">
+			id : <input name="id">
+			<br>
+			pwd : <input name="pwd">
+			<br>
+			<input type="button" value="폼체크 2" onClick="check2();">
+		</form>
+		
+		<hr>
+		
+		<form>
+			id : <input name="id">
+			<br>
+			pwd : <input type="password" name="pw">
+			<br>
+			
+			<!-- this는 폼체크 3 버튼을 의미한다. -->
+			<!-- this.form은 나를 포장하고 있는 폼태그를 의미한다 -->
+			<!-- input 안에서만 사용 가능. 오로지 this.form만 존재 -->
+			<input type="button" value="폼체크 3" onClick="check3(this.form);">
+		</form>
+		
+	</body>
+</html>

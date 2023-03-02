@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트의 배열</title>
+		
+		<script>
+			/* 같은 타입의 자료형을 넣을 필요가 없다 */
+			let arr1 = [1, 2.2, "홍길동", 4, 5];
+			/* 길이가 동적임, 존재하지 않는 index에도 공간 할당이 가능 */
+			arr1[5] = 10;
+			/* 오류가 발행하지 않으나 빈 인덱스들의 값을 알 수 없는 데이터로 표현해줌(undefined) */
+			arr1[10] = true;
+			/* 자료형에 타입이 따로 없다보니 넣는대로 들어감 */
+			for(let i = 0;	i < arr1.length;	i++){
+				document.write(arr1[i], " ");
+			}
+			
+			document.write("<hr>");
+			
+			//int[] arr2 = new int[3];
+			let arr2 = new Array(3);
+			
+			for(let i = 0;	i < arr2.length;	i++){
+				arr2[i] = (i+1)*10;
+				
+				document.write(arr2[i], "&nbsp;");
+			}
+			
+			document.write("<hr>");
+
+			let arr3 = new Array();
+			let first = [10, 20];
+			let second = [30, 40, 50];
+			arr3[0] = first;
+			arr3[1] = second;
+			
+			for(let i = 0;	i < arr3.length;	i++){
+				
+				for(let j = 0; j < arr3[i].length;	j++){
+					document.write(arr3[i][j], " ");
+				}
+				
+				document.write("<br>");
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

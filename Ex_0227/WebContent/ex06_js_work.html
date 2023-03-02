@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>prompt값 정수 변경</title>
+		
+		<script>
+			//prompt로 입력 받은 값은 "" 문자열 구조
+			let kor = prompt("국어");
+			
+			//kor을 실제 정수로 바꿔주자
+			kor = Number(kor);//Integer.parseInt(kor);
+			
+			let eng = Number(prompt("영어"));
+			
+			let mat = Number(prompt("수학"));
+			
+			let result = kor + eng + mat;
+			
+			document.write('총점 : ', result, "<br>");
+			
+			document.write('평균 : ', (result / 3).toFixed(2));
+			
+			document.write("<hr>");
+			
+			//String(result) : 정수 -> 문자열
+			document.write(String(result) + 100);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

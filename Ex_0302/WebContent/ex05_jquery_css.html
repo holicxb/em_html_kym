@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>속성 선택자</title>
+		
+		<script src="js/jquery-3.6.3.min.js"></script>
+		
+		<!-- jQuery사용을 위한 초기화 영역 -->
+		<script>
+			$(function() {
+				$("#content-1").css("background", "pink")
+							   .css("color", "blue");
+				
+				/* div중 id가 vi로 시작하는 것을 찾으시오 (^=) */
+				$("div[id^='vi']").css("background", "blue");
+				
+				/* (*= ) 해당 문자를 포함하는 태그를 찾으시오 */
+				$("div[id*='tent']").css("color", "red");
+				
+				/* ($= ) 해당 값으로 끝나느 태그를 찾으시오 */
+				$("div[id$='1']").css("background", "aqua");
+			});
+		</script>
+		
+	</head>
+	<body>
+		<h2>jQuery 속성 선택자</h2>
+		<div>
+			<div id="content-1">div test1</div>
+			<div id="content-2">div test2</div>
+			<div id="view-1">div view test1</div>
+			<div id="content-3">div content3</div>
+		</div>
+	</body>
+</html>

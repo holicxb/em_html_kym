@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery가상클래스</title>
+		
+		<script src="js/jquery-3.6.3.min.js"></script>
+		
+		<style>
+			table{width: 200px;}
+			
+			.selectClass{color: red; font-size: 20px;}
+		</style>
+		
+		<script>
+			$(function() {
+				$("tr:even").css("background", "pink");
+				$("tr:odd").css("background", "yellow");
+				
+				$("#btn1").click(function() {
+					//첫번째 tr태그에게 selectClass라는 클래스 명을 추가
+					$("tr:first").addClass("selectClass");
+				});
+				
+				$("#btn2").click(function() {
+					//첫번째 tr태그에 붙여진 class 명을 제거하는 속성
+					$("tr:first").removeClass("selectClass");
+				});
+				
+				//eq : ==
+				//lt : <
+				//gt : >
+				$("tr:eq(4)").css("font-size", "30px");
+				$("tr:lt(2)").css("color", "green");
+			});
+		</script>
+		
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<td>one</td>
+			</tr>
+
+			<tr>
+				<td>two</td>
+			</tr>
+
+			<tr>
+				<td>three</td>
+			</tr>
+
+			<tr>
+				<td>four</td>
+			</tr>
+
+			<tr>
+				<td>five</td>
+			</tr>
+		</table>
+		
+		<input type="button" id="btn1" value="버튼">
+		<input type="button" id="btn2" value="제거">
+	</body>
+</html>
